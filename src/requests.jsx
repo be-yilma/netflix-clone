@@ -1,4 +1,7 @@
-const key="0c983abced982060be54d661836a2d49"
+
+require('dotenv').config()
+// console.log(process.env) 
+const key=(process.env.Api_key)
 const requests={
     fetchNetflixOriginals: `https://api.themoviedb.org/3/discover/tv?api_key=${key}&with_networks=213`,
     fetchTopRatedMovies: `https://api.themoviedb.org/3/movie/top_rated?api_key=${key}&language=en-US&page=1`,
